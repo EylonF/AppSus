@@ -1,4 +1,4 @@
-import { noteService } from '../services/email.service.js'
+import { noteService } from '../services/note.service'
 
 export class NoteApp extends React.Component {
 

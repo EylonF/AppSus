@@ -43,23 +43,23 @@ const gNotes = [
     _createNotes()
 
     function query(filterBy=null) {
-        const notes = _loadEmailsFromStorage()
+        const notes = _loadNotesFromStorage()
         if (!filterBy) return Promise.resolve(notes) 
     }
 
     function _createNotes(){
-        let Notes = _loadEmailsFromStorage()
-        if (!Notes || !Notes.length) {
-            Notes = gNotes
+        let notes = _loadNotesFromStorage()
+        if (!notes || !notes.length) {
+            notes = gNotes
         }
-        _saveEmailsToStorage(emails)
+        _saveNotesToStorage(notes)
     }
 
     
-function _saveEmailsToStorage(emails) {
-    storageService.saveToStorage(STORAGE_KEY, emails)
+function _saveNotesToStorage(notes) {
+    storageService.saveToStorage(STORAGE_KEY, notes)
 }
 
-function _loadEmailsFromStorage() {
+function _loadNotesFromStorage() {
     return storageService.loadFromStorage(STORAGE_KEY)
 }
