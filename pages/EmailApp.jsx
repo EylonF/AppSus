@@ -35,7 +35,6 @@ export class EmailApp extends React.Component {
                 <EmailNavBar/>
                 <EmailList emails={emails}/>
                 </div>
-                <h1>email App</h1>
             </section>
         )
     }
