@@ -1,0 +1,34 @@
+@font-face {
+    font-family: bungee;
+    src: url('../../font/bungee/BungeeShade-Regular.ttf');
+}
+
+.app-header{
+    background-color: #292929;    
+}
+.app-header .header-container{
+width: 100%;
+display: flex;
+align-items: center;
+    /* justify-content: center; */
+}
+
+
+
+.app-header h1{ 
+    display: inline-block;
+font-family: bungee;
+color: #fff;
+font-size: 2rem;
+color: #df999a;
+margin-inline: 40px;
+}
+
+.app-header h1 span{ 
+color: #ace4e4
+}
+
+.app-header img{ 
+    display: inline-block;
+width: 100px;
+}

@@ -1,12 +1,12 @@
-import {Home} from './pages/home.jsx'
+import { Home } from './pages/home.jsx'
+import { AppHeader } from './cmps/AppHeader.jsx'
 
 export function App() {
     return <section className="app">
-        <header>
-            <h1>My App</h1>
-        </header>
+
+        <AppHeader />
         <main>
-            <Home/>
+            <Home />
         </main>
     </section>
 }
