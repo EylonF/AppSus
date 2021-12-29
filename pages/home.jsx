@@ -3,8 +3,8 @@ export class Home extends React.Component {
 
     render() {
         return (
-            <section className="main-layout">
-                <h2>Home Sweet Home</h2>
+            <section className="main-hero main-layout">
+                <h2>Welcome to</h2>
             </section>
         )
     }
