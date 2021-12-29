@@ -1,6 +1,7 @@
 @import './basics/base.css';
 @import './cmps/app-header.css';
 @import './cmps/app-footer.css';
+@import './cmps/nav-bar.css';
 @import './basics/helpers.css';
 @import './pages/home.css';
 

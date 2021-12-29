@@ -6,8 +6,8 @@ export function AppFooter() {
         <section className="app-footer">
             <div className="footer-container main-layout">
 
-                <h1>APP<span>SUS</span></h1>
                 <img src="../assets/img/sus-logo.png" alt="" />
+                <h1>APP<span>SUS</span></h1>
                 {/* <Link exect to="/home"><h1>APPSUS</h1><img src="../assets/img/sus-logo.png" alt="" /></Link> */}
                 
                 {/* <nav className="main-nav">
