@@ -1,4 +1,7 @@
 
+const { NavLink, Link } = ReactRouterDOM
+
+
 export class Home extends React.Component {
 
     render() {
@@ -8,17 +11,12 @@ export class Home extends React.Component {
                 <h1>APP<span>SUS</span></h1>
                 <img src="assets/img/sus-logo.png" alt="" />
                 <div className="btn-container">
-                <button className="btn-home1">Email App</button>
-                <button className="btn-home2">Note App</button>
+                    <NavLink exact to="/email"><button className="btn-home1">Email App</button></NavLink>
+                
+                    <NavLink exact to="/note"><button className="btn-home2">Note App</button></NavLink>
                 </div>
             </section>
         )
     }
 }
 
-
-
-{/* <span className="3"></span>
-<span className="4"></span>
-<span className="5"></span>
-<span className="6"></span> */}

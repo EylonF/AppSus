@@ -1,10 +1,11 @@
+const { NavLink, Link } = ReactRouterDOM
 
 
 export function NavBar() {
 
     return (
-        <div class="dropstart">
-  <div class="icon nav-icon-1 dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <div className="dropstart">
+  <div className="icon nav-icon-1 dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     <span></span>
     <span></span>
     <span></span>
@@ -16,10 +17,10 @@ export function NavBar() {
     <span></span>
   </div>  
  
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><NavLink exact to="/"><p className="dropdown-item">Home</p></NavLink></li>
+    <li><NavLink exact to="/email"><p className="dropdown-item">Email app</p></NavLink></li>
+    <li><NavLink exact to="/note"><p className="dropdown-item">Note app</p></NavLink></li>
   </ul>
 </div>
     )
