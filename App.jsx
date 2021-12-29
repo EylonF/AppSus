@@ -11,10 +11,13 @@ export function App() {
     return (
         <Router>
             <section className="app">
-
                 <AppHeader />
                 <main>
-                    <Home />
+                    <Switch>
+                        {/* <Route component={Home} path="/"/>
+                        <Route component={Home} path="/"/> */}
+                        <Route component={Home} path="/"/>
+                    </Switch>
                 </main>
 
                 <AppFooter />
