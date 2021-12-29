@@ -1,5 +1,5 @@
-
-const { NavLink, Link } = ReactRouterDOM
+import {NavBar} from './NavBar.jsx'
+// const { NavLink, Link } = ReactRouterDOM
 
 export function AppHeader() {
 
@@ -9,6 +9,7 @@ export function AppHeader() {
 
                 <h1>APP<span>SUS</span></h1>
                 <img src="../assets/img/sus-logo.png" alt="" />
+                <NavBar/>
                 {/* <Link exect to="/home"><h1>APPSUS</h1><img src="../assets/img/sus-logo.png" alt="" /></Link> */}
                 
                 {/* <nav className="main-nav">
