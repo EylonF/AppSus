@@ -1,11 +1,10 @@
-
 const { NavLink, Link } = ReactRouterDOM
 
-export function AppHeader() {
+export function AppFooter() {
 
     return (
-        <section className="app-header">
-            <div className="header-container main-layout">
+        <section className="app-footer">
+            <div className="footer-container main-layout">
 
                 <h1>APP<span>SUS</span></h1>
                 <img src="../assets/img/sus-logo.png" alt="" />

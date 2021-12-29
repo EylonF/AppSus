@@ -1,5 +1,6 @@
 import { Home } from './pages/home.jsx'
 import { AppHeader } from './cmps/AppHeader.jsx'
+import { AppFooter } from './cmps/AppFooter.jsx'
 
 export function App() {
     return <section className="app">
@@ -8,6 +9,8 @@ export function App() {
         <main>
             <Home />
         </main>
+
+        <AppFooter />
     </section>
 }
 
