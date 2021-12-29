@@ -17,25 +17,71 @@ padding: 50px 0 50px;
     font-family: major;
     color: azure;
     text-align: center;
-    font-size: 5rem;
+    font-size: 3rem;
     margin-top: 110px;
-    transform: rotate(355deg);
+    /* transform: rotate(1deg); */
 
 }
 
 .main-hero h1{ 
-    /* margin-top: 135px; */
     display: inline-block;
 font-family: bungee;
 color: #fff;
 font-size: 8rem;
 color: #df999a;
-margin-inline-end: 10px;
-transform: rotate(355deg);
+/* margin-inline-end: 10px; */
+transform: rotate(0.5deg);
 }
 
-.main-hero h1 span{ 
+.main-hero h1 span.logo{ 
 color: #ace4e4
+}
+.main-hero h1 span.logoLetter1{ 
+font-size: 7rem;
+}
+.main-hero h1 span.logoLetter2{ 
+font-size: 7.4rem;
+}
+.main-hero h1 span.logoLetter3{ 
+font-size: 7.8rem;
+}
+.main-hero h1 span.logo span.logoLetter4{ 
+font-size: 8.2rem;
+}
+.main-hero h1 span.logo span.logoLetter5{ 
+font-size: 8.6rem;
+}
+.main-hero h1 span.logo span.logoLetter6{ 
+font-size: 9rem;
+}
+
+
+.main-hero h2 span.letter1{ 
+font-size: 2.6rem;
+}
+.main-hero h2 span.letter2{ 
+font-size: 3rem;
+}
+.main-hero h2 span.letter3{ 
+font-size: 3.4rem;
+}
+.main-hero h2 span.letter4{ 
+font-size: 3.8rem;
+}
+.main-hero h2 span.letter5{ 
+font-size: 4.2rem;
+}
+.main-hero h2 span.letter6{ 
+font-size: 4.6rem;
+}
+.main-hero h2 span.letter7{ 
+font-size: 5rem;
+}
+.main-hero h2 span.letter8{ 
+font-size: 5.4rem;
+}
+.main-hero h2 span.letter9{ 
+font-size: 5.8rem;
 }
 
 
@@ -43,7 +89,7 @@ color: #ace4e4
     display: inline-block;
     width: 100px;
     width: 200px;
-    margin-top: 110px;
+    margin-top: 70px;
 }
 
 .btn-container {
