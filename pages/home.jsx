@@ -24,7 +24,7 @@ export class Home extends React.Component {
                         <NavLink exact to="/note"><button className="btn-home2">Note App</button></NavLink>
                     </div>
                 </section>
-                <img className="background-img" src="../assets/img/dark.jpg" alt="" />
+                <img className="background-img" src="assets/img/dark.jpg" alt="" />
 
             </React.Fragment>
 
