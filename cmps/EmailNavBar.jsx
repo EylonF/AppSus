@@ -4,13 +4,13 @@ const { NavLink, Link } = ReactRouterDOM
 export function EmailNavBar() {
 
     return (
-        <nav className="navbar navbar-light bg-light">
-            <div className="container-fluid">
-                <form className="d-flex">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
+        <nav className="nav flex-column">
+            <NavLink exact to="/email/inbox"><p className="nav-link active">inbox</p></NavLink>
+            <NavLink exact to="/email/starred"><p className="nav-link active">starred</p></NavLink>
+            {/* <a class="nav-link active" aria-current="page" href="#">Active</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link disabled">Disabled</a> */}
         </nav>
     )
 }
