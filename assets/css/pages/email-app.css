@@ -1,0 +1,8 @@
+.email-app{
+    width: 100%;
+}
+.email-app .main-content{
+    width: 100%;
+    display: flex;
+}
+
