@@ -17,7 +17,7 @@ export class Home extends React.Component {
                         <span className="letter7">e</span> <span className="letter8">t</span>
                         <span className="letter9">0</span></h2>
                     <h1><span className="logoLetter1">A</span><span className="logoLetter2">P</span><span className="logoLetter3">P</span><span className="logo"><span className="logoLetter4">S</span><span className="logoLetter5">U</span><span className="logoLetter6">S</span></span></h1>
-                    <img className="logo" src="assets/img/sus-logo.png" alt="" />
+                    <img className="logoImg" src="assets/img/sus-logo.png" alt="" />
                     <div className="btn-container">
                         <NavLink exact to="/email"><button className="btn-home1">Email App</button></NavLink>
 
