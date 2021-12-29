@@ -8,7 +8,7 @@ export function AppHeader() {
             <div className="header-container main-layout">
                 <div className="logo-container">
                     <h1>APP<span>SUS</span></h1>
-                    <img src="../assets/img/sus-logo.png" alt="" />
+                    <img src="assets/img/sus-logo.png" alt="" />
                 </div>
                 <NavBar />
                 {/* <Link exect to="/home"><h1>APPSUS</h1><img src="../assets/img/sus-logo.png" alt="" /></Link> */}
