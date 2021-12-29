@@ -94,11 +94,18 @@ font-size: 5.8rem;
 }
 
 
-.main-hero .logo{ 
+.main-hero .logoImg{ 
     display: inline-block;
     width: 200px;
     /* margin-top: 2%; */
-}
+    transition: 1s;
+    
+  }
+  
+  .main-hero .logoImg:hover{
+    /* width: 300px; */
+    transform: rotateY(150deg);
+  }
 
 .btn-container {
     display: flex;
