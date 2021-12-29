@@ -21,7 +21,7 @@ export class EmailApp extends React.Component {
         emailService.query().then(emails => {
             // eventBusService.emit('books-count', books.length)
 
-            console.log(emails)
+            // console.log(emails)
             this.setState({ emails })
         })
     }
@@ -31,8 +31,10 @@ export class EmailApp extends React.Component {
         return (
             <section className="email-app">
                 <EmailFilterBar/>
+                <div className="main-content">
                 <EmailNavBar/>
                 <EmailList emails={emails}/>
+                </div>
                 <h1>email App</h1>
             </section>
         )
