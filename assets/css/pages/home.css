@@ -98,14 +98,14 @@ font-size: 5.8rem;
     display: inline-block;
     width: 200px;
     /* margin-top: 2%; */
-    transition: 0.5s;
+    transition: 1s;
     
   }
   
   .main-hero .logoImg:hover{
     /* width: 300px; */
     transform: rotateY(150deg);
-}
+  }
 
 .btn-container {
     display: flex;
