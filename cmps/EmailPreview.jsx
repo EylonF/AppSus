@@ -1,13 +1,17 @@
-
+// import {utilService} from '../services/util.service.js'
 
 export function EmailPreview({ email }) {
-    console.log('email from preview',email)
+    console.log('email from preview', email)
+    const { id, subject, body, isRead, sentAt, to } = email
+
+// const formattedTime = utilService.getFormattedTime(sentAt)
+
     return (
-        <article className="email-preview">
-            <h4>email</h4>
-            {/* <img src={book.thumbnail} alt="" /> */}
-            {/* <h3>Title: {book.title}</h3> */}
-            {/* <h4>Price:{bookPrice}</h4> */}
+        <article className="email-preview" id={id}>
+            <p>&#9733;</p>
+            <p>{to}</p>
+            <p>{subject}</p>
+            {/* <p>{sentDate}</p> */}
         </article>
     )
 }
