@@ -25,8 +25,8 @@ z-index: 1;
     font-family: major;
     color: azure;
     text-align: center;
-    font-size: 3rem;
-    margin-top: 110px;
+    font-size: 20%;
+    margin-top: 6.5%;
     /* transform: rotate(1deg); */
 
 }
@@ -40,6 +40,7 @@ color: #df999a;
 /* margin-inline-end: 10px; */
 transform: rotate(0.5deg);
 }
+
 
 .main-hero h1 span.logo{ 
 color: #ace4e4
@@ -96,7 +97,7 @@ font-size: 5.8rem;
 .main-hero .logo{ 
     display: inline-block;
     width: 200px;
-    margin-top: 70px;
+    /* margin-top: 2%; */
 }
 
 .btn-container {
