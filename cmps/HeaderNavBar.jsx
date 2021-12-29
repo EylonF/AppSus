@@ -1,7 +1,7 @@
 const { NavLink, Link } = ReactRouterDOM
 
 
-export function NavBar() {
+export function HeaderNavBar() {
 
     return (
         <div className="dropstart">

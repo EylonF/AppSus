@@ -1,4 +1,4 @@
-import { NavBar } from './NavBar.jsx'
+import { HeaderNavBar } from './HeaderNavBar.jsx'
 const { NavLink, Link } = ReactRouterDOM
 
 export function AppHeader() {
@@ -13,7 +13,7 @@ export function AppHeader() {
                 </div>
 
                 </Link>
-                <NavBar />
+                <HeaderNavBar />
                 
             </div>
         </section>
