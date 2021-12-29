@@ -3,6 +3,10 @@
     src: url('../../font/major/MajorMonoDisplay-Regular.ttf');
 }
 
+body {
+    background-color:#292929 ;
+}
+
 .main-hero {
     background-image: url("../../img/dark.jpg");
     width: 100%;
@@ -14,7 +18,6 @@ padding: 50px 0 50px;
 }
 
 .main-hero h2 {
-    /* display: flex; */
     font-family: major;
     color: azure;
     text-align: center;
