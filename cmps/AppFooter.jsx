@@ -8,13 +8,7 @@ export function AppFooter() {
 
                 <h1>APP<span>SUS</span></h1>
                 <img src="../assets/img/sus-logo.png" alt="" />
-                {/* <Link exect to="/home"><h1>APPSUS</h1><img src="../assets/img/sus-logo.png" alt="" /></Link> */}
-                
-                {/* <nav className="main-nav">
-                    <NavLink exact to="/"><p>Home</p></NavLink>
-                    <NavLink to="/book"><p>Books Shop</p></NavLink>
-                    <NavLink to="/about"><p>About</p></NavLink>
-                </nav> */}
+                <small>© coffe-rights 2021</small>
             </div>
         </section>
     )
