@@ -2,16 +2,27 @@ import { Home } from './pages/home.jsx'
 import { AppHeader } from './cmps/AppHeader.jsx'
 import { AppFooter } from './cmps/AppFooter.jsx'
 
+const Router = ReactRouterDOM.HashRouter
+const { Route, Switch } = ReactRouterDOM
+
 export function App() {
-    return <section className="app">
 
-        <AppHeader />
-        <main>
-            <Home />
-        </main>
 
-        <AppFooter />
-    </section>
+    return (
+        <Router>
+            <section className="app">
+
+                <AppHeader />
+                <main>
+                    <Home />
+                </main>
+
+                <AppFooter />
+            </section>
+
+        </Router>
+
+    )
 }
 
 
