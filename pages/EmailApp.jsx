@@ -1,4 +1,6 @@
 import { emailService } from '../services/email.service.js'
+import { EmailNavBar } from '../cmps/EmailNavBar.jsx'
+
 
 
 export class EmailApp extends React.Component {
@@ -25,6 +27,7 @@ export class EmailApp extends React.Component {
     render() {
         return (
             <section className="email-app">
+                <EmailNavBar/>
                 <h1>email App</h1>
             </section>
         )
