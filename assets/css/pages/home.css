@@ -13,6 +13,7 @@ width: 100%;
 position: absolute;
 z-index: 1;
 }
+
 .app .background-img{
     width: 100%;
     position: relative;
@@ -28,7 +29,6 @@ z-index: 1;
     font-size: 20%;
     margin-top: 6.5%;
     /* transform: rotate(1deg); */
-
 }
 
 .main-hero h1{ 
