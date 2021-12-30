@@ -1,7 +1,18 @@
 
 
-export function NoteTodos(props){
+export function NoteTodos(note) {
+    const { info, isPinned, id, } = note.note
+    const todoTxt = info.todos.map(todo => todo.txt)
+
+
     return (
-        <h1>Note Todos</h1>
+        <article className="card-note card text-dark bg-warning mb-3">
+            <p>{info.label}</p>
+            <ul>
+                {info.todos.map(todo => <li>{todo.txt}</li>)}
+            </ul>
+
+
+        </article>
     )
 }

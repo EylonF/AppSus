@@ -19,7 +19,7 @@ const gNotes = [
      id: "n102",
      type: "note-img",
      info: {
-     url: "http://some-img/me",
+     url: "https://www.picshare.co.il/m_pictures/img71865.jpg",
      title: "Bobi and Me"
      },
      style: {

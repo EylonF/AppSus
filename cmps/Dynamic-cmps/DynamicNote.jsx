@@ -5,7 +5,6 @@ import { NoteVideo } from './NoteVideo.jsx'
 
 
 export function DynamicNote(note){
-    console.log('note:', note);
     
     switch (note.note.type) {
         case "note-txt":

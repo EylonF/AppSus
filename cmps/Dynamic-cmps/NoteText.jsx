@@ -1,6 +1,13 @@
 
-export function NoteText(props){
+export function NoteText(note){
+    const {info , isPinned, id} = note.note
+
     return (
-        <h1>Note text</h1>
+        <article className="card-note card text-white bg-danger mb-3">
+            <p>{info.txt}</p>
+        </article>
     )
 }
+
+
+

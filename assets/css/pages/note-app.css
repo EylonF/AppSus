@@ -1,8 +1,20 @@
 
 .note-app{
+    display: flex;
     width: 100%;
 }
-.note-app .note-main-content{
+/* .note-app .note-main-content{
     width: 100%;
     display: flex;
+} */
+
+.card-note {
+    min-width: 400px;
+    display: inline-block;
+    min-height: 200px;
+    text-align: center;
+}
+
+.card-note img{
+    max-width: 350px;
 }
