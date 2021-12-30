@@ -4,7 +4,7 @@ export function NoteText(note){
 
     return (
         <article className="card-note card text-white bg-danger mb-3">
-            <h1 className="note-text">{info.txt}</h1>
+            <h1 className="note-text" contenteditable="true">{info.txt}</h1>
         </article>
     )
 }
