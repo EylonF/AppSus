@@ -21,7 +21,7 @@ export class ComposeEmailModal extends React.Component {
     }
 
     submitForm = (ev) => {
-        // ev.preventDefault()
+        ev.preventDefault()
         
         // this.setState({email:{sentAt:new Date()}})
         emailService.addEmail(this.state.email)
