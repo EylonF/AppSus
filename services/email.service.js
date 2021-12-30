@@ -3,6 +3,7 @@ import { storageService } from './storage.service.js'
 export const emailService = {
     query,
     getEmailId,
+    addEmail,
 }
 
 const STORAGE_KEY = 'emailDB'
@@ -104,4 +105,10 @@ function _loadEmailsFromStorage() {
 function getEmailId(){
     const emails = _loadEmailsFromStorage()
 return `e10${emails.length+1}`
+}
+
+function addEmail(email){
+    let emails = _loadEmailsFromStorage()
+emails.unshift(email)
+_saveEmailsToStorage(emails)
 }

@@ -51,7 +51,7 @@ export class EmailApp extends React.Component {
             <section className="email-app main-layout">
                 
                 <EmailSearchBar />
-                <div className="main-content">
+                <div className="main-content main-layout">
                     <EmailNavBar onSetFilter={this.onSetFilter} onComposeEmail={this.onComposeEmail}/>
                     <EmailList emails={emails} />
                 </div>
