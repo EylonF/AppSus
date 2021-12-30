@@ -41,7 +41,7 @@ const gNotes = [
         id: "n104",
         type: "note-video",
         info: {
-            url: "https://youtu.be/w8KQmps-Sog",
+            url: "https://www.youtube.com/embed/GiJki1YyptE",
             title: "mussssssssse"
         },
     },

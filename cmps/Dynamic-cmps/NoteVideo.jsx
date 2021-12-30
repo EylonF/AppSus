@@ -1,7 +1,9 @@
 import ReactPlayer from 'react-player'
 
-export function NoteVideo(note){
-    const {info , isPinned, id, style } = note.note
+export function NoteVideo(note) {
+    const { info, isPinned, id, style } = note.note
+    console.log('info.url:', info.url);
+
 
     return (
         <article className="card-note card text-white bg-secondary mb-3">
@@ -12,3 +14,4 @@ export function NoteVideo(note){
         </article>
     )
 }
+
