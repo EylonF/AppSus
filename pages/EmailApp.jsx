@@ -1,5 +1,5 @@
 import { emailService } from '../services/email.service.js'
-import { EmailFilterBar } from '../cmps/EmailFilterBar.jsx'
+import { EmailSearchBar } from '../cmps/EmailSearchBar.jsx'
 import { EmailNavBar } from '../cmps/EmailNavBar.jsx'
 import { EmailList } from '../cmps/EmailList.jsx'
 
@@ -9,13 +9,13 @@ export class EmailApp extends React.Component {
 
     state = {
         emails: [],
-        filterBy : {
+        filterBy: {
             status: 'inbox',
             txt: '', // no need to support complex text search
             isRead: false, // (optional property, if missing: show all)
             isStared: false, // (optional property, if missing: show all)
-           }
-           
+        }
+
     }
 
     componentDidMount() {
@@ -23,8 +23,8 @@ export class EmailApp extends React.Component {
     }
 
     loadEmails = () => {
-        const {filterBy} = this.state
-        console.log('filter by from loadmails',filterBy)
+        const { filterBy } = this.state
+        console.log('filter by from loadmails', filterBy)
         emailService.query(filterBy).then(emails => {
             // eventBusService.emit('books-count', books.length)
 
@@ -37,17 +37,23 @@ export class EmailApp extends React.Component {
         // console.log('value',value)
         // this.setState({filterBy},this.loadEmails)
         this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, status: value.status } }), () => {
-            this.loadEmails() })
+            this.loadEmails()
+        })
+    }
+
+    onComposeEmail = (email) => {
+        console.log(email)
     }
 
     render() {
-        const {emails} = this.state
+        const { emails } = this.state
         return (
             <section className="email-app">
-                <EmailFilterBar/>
+                
+                <EmailSearchBar />
                 <div className="main-content">
-                <EmailNavBar onSetFilter={this.onSetFilter}/>
-                <EmailList emails={emails}/>
+                    <EmailNavBar onSetFilter={this.onSetFilter} onComposeEmail={this.onComposeEmail}/>
+                    <EmailList emails={emails} />
                 </div>
             </section>
         )
