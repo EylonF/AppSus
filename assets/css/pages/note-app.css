@@ -6,6 +6,7 @@
     margin-top: 20px;
     border-radius: 50px;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .card-note {
@@ -14,11 +15,13 @@
     display: inline-block;
     min-height: 200px;
     text-align: center;
+    position: relative;
     
 }
 
 .card-note img{
     max-width: 350px;
+    margin-bottom: 20px;
 }
 .card-note h1{
     font-size: 2rem;

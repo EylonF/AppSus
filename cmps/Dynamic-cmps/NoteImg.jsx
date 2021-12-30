@@ -4,7 +4,7 @@ export function NoteImg(note){
 
     return (
         <article className="card-note card text-white bg-success mb-3">
-            <p>{info.title}</p>
+            <h3>{info.title}</h3>
             <img src={info.url} alt="" />
         </article>
     )
