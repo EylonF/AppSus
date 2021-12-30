@@ -15,7 +15,6 @@
     display: inline-block;
     min-height: 200px;
     text-align: center;
-    position: relative;
     
 }
 
@@ -26,5 +25,14 @@
 .card-note h1{
     font-size: 2rem;
     margin-top: 60px;
+}
+
+.add-btn {
+    background-color: #c0b6b6;
+}
+
+input {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: Bangers;
+    src: url(../../font/Bangers/Bangers-Regular.ttf);
+}
+
+
+.note-add-main {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.2rem;
+}
