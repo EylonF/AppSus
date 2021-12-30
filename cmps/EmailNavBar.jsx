@@ -1,19 +1,40 @@
 const { NavLink, Link } = ReactRouterDOM
 
 
-export function EmailNavBar() {
+export class EmailNavBar extends React.Component {
 
-    return (
-            <div className="email-nav-container">
+ state = {
+    filterBy : {
+        status: 'inbox',
+        isStared: false, // (optional property, if missing: show all)
+       }
+       
+ }
 
-            <button type="button" class="btn btn-outline-warning">+ Compose</button>
-            <nav className="nav flex-column">
-                <NavLink exact to="/email/inbox"><p className="nav-link active">Inbox</p></NavLink>
-                <NavLink exact to="/email/starred"><p className="nav-link">Starred</p></NavLink>
-                <NavLink exact to="/email/sent"><p className="nav-link">Sent Mail</p></NavLink>
-                <NavLink exact to="/email/draft"><p className="nav-link">Draft</p></NavLink>
-            </nav>
-            </div>
+ handelStatusChange = ({ target }) => {
+    const newStatus = target.name
+    if (newStatus === this.state.filterBy.status) return
+    this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, status: newStatus } }), () => {
+        
+        this.props.onSetFilter({status:this.state.filterBy.status})
+    })
+}
 
-    )
+
+ render() {
+     return (
+             <div className="email-nav-container">
+ 
+             <button type="button" class="btn btn-outline-warning">+ Compose</button>
+             <nav className="nav flex-column">
+                 <button onClick={this.handelStatusChange} name="inbox" className="nav-link active">Inbox</button>
+                 <p className="nav-link">Starred</p>
+                 <button onClick={this.handelStatusChange} name="sent" className="nav-link">Sent Mail</button>
+                 <p className="nav-link">Trash</p>
+             </nav>
+             </div>
+ 
+     )
+
+ }
 }
