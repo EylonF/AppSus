@@ -48,7 +48,7 @@ export class EmailApp extends React.Component {
     render() {
         const { emails } = this.state
         return (
-            <section className="email-app">
+            <section className="email-app main-layout">
                 
                 <EmailSearchBar />
                 <div className="main-content">

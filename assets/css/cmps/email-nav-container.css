@@ -1,3 +1,13 @@
 .email-nav-container{
     width: 30%;
 }
+
+
+.email-nav-container .compose-btn{
+    width: 90%;
+    margin-bottom: 10px;
+}
+.email-nav-container .email-nav-btn{
+    width: 50%;
+    margin-bottom: 10px;
+}
