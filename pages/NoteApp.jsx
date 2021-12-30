@@ -23,12 +23,32 @@ export class NoteApp extends React.Component {
 
     }
 
+    onAddNote = (input, type) => {
+		noteService.addNewNote(input, type).then(() => {
+			this.loadNotes();
+		})
+	}
+
+	onDeleteNote = (noteId) => {
+		noteService.deleteNote(noteId).then(() => {
+			this.loadNotes()
+		})
+	}
+
     render() {
         const {notes} = this.state
         return (
             <section className="note-app main-layout">
-                <AddNote />
-          <NoteList notes={notes}/>
+                <AddNote
+					loadNotes={this.loadNotes}
+					handleChange={this.handleChange}
+					onAddNote={this.onAddNote}
+					notes={notes} />
+				<NoteList
+					loadNotes={this.loadNotes}
+					onDeleteNote={this.onDeleteNote}
+					notes={notes} />
+          {/* <NoteList notes={notes}/> */}
             </section>
         )
     }

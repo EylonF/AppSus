@@ -2,6 +2,8 @@ import { storageService } from './storage.service.js'
 
 export const noteService = {
     query,
+    getNoteId,
+    addNote,
 }
 
 const STORAGE_KEY = 'noteDB'
@@ -70,4 +72,15 @@ function _saveNotesToStorage(notes) {
 
 function _loadNotesFromStorage() {
     return storageService.loadFromStorage(STORAGE_KEY)
+}
+
+function getNoteId(){
+    const notes = _loadNotesFromStorage()
+return `e10${notes.length+1}`
+}
+
+function addNote(note){
+    let notes = _loadNotesFromStorage()
+notes.unshift(note)
+_saveNotesToStorage(notes)
 }
