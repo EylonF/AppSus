@@ -1,0 +1,8 @@
+
+.note-app{
+    width: 100%;
+}
+.note-app .note-main-content{
+    width: 100%;
+    display: flex;
+}

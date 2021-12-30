@@ -14,7 +14,7 @@ export class Home extends React.Component {
                         <span className="letter4">c</span>
                         <span className="letter5">0</span>
                         <span className="letter6">m</span>
-                        <span className="letter7">e</span> <span className="letter8">t</span>
+                        <span className="letter7">e </span> <span className="letter8">t</span>
                         <span className="letter9">0</span></h2>
                     <h1><span className="logoLetter1">A</span><span className="logoLetter2">P</span><span className="logoLetter3">P</span><span className="logo"><span className="logoLetter4">S</span><span className="logoLetter5">U</span><span className="logoLetter6">S</span></span></h1>
                     <img className="logoImg" src="assets/img/sus-logo.png" alt="" />
