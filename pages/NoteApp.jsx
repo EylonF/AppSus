@@ -25,9 +25,7 @@ export class NoteApp extends React.Component {
     render() {
         const {notes} = this.state
         return (
-            <section className="note-app">
-          <h1>Note App</h1>
-          <div className="note-main-content"></div>
+            <section className="note-app main-layout">
           <NoteList notes={notes}/>
             </section>
         )
