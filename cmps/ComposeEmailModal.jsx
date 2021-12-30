@@ -22,8 +22,15 @@ export class ComposeEmailModal extends React.Component {
 
     submitForm = (ev) => {
         ev.preventDefault()
-
-        console.log(ev.target)
+        emailService.addEmail(this.state.email)
+        // console.log(this.state.email)
+    }
+    
+    handleChange = ({ target }) => {
+        const field = target.name
+        const value = target.value
+        this.setState((prevState) => ({ email: { ...prevState.email, [field]: value } }))
+        console.log(this.state.email[field])
     }
 
 
@@ -41,15 +48,15 @@ export class ComposeEmailModal extends React.Component {
                             <div className="modal-body">
                                 <div class="mb-3">
                                     <label for="to-input" class="form-label">To:</label>
-                                    <input type="email" class="form-control" id="to-input" placeholder="name@example.com" />
+                                    <input type="email" class="form-control" id="to-input" name="to" placeholder="name@example.com" onChange={this.handleChange}/>
                                 </div>
                                 <div class="mb-3">
                                     <label for="subject-input" class="form-label">Subject:</label>
-                                    <input type="text" class="form-control" id="subject-input"/>
+                                    <input type="text" class="form-control" id="subject-input" name="subject" onChange={this.handleChange}/>
                                 </div>
                                 <div class="mb-3">
                                     <label for="textarea-input" class="form-label">Textarea:</label>
-                                    <textarea class="form-control" id="textarea-input" rows="4"></textarea>
+                                    <textarea class="form-control" id="textarea-input" name="body" rows="4" onChange={this.handleChange}></textarea>
                                 </div>
                             </div>
                             <div className="modal-footer">
