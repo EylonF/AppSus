@@ -1,7 +1,7 @@
 // const { NavLink, Link } = ReactRouterDOM
 
 
-export function EmailFilterBar() {
+export function EmailSearchBar() {
 
     return (
         <nav className="navbar navbar-light bg-light">
