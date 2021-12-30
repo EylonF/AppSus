@@ -42,15 +42,15 @@ export class EmailApp extends React.Component {
     }
 
     onComposeEmail = (email) => {
-        console.log(email)
+        this.loadEmails()
     }
 
     render() {
-        const { emails } = this.state
+        const { emails, filterBy } = this.state
         return (
             <section className="email-app main-layout">
                 
-                <EmailSearchBar />
+                <EmailSearchBar searchIn = {filterBy.status} />
                 <div className="main-content main-layout">
                     <EmailNavBar onSetFilter={this.onSetFilter} onComposeEmail={this.onComposeEmail}/>
                     <EmailList emails={emails} />

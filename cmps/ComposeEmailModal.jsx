@@ -9,7 +9,7 @@ export class ComposeEmailModal extends React.Component {
             body: '',
             isRead: false,
             isStared: false,
-            sentAt: null,
+            sentAt: new Date(),
             to: '',
             from: 'Mahatma Appsus'
         }
@@ -21,7 +21,9 @@ export class ComposeEmailModal extends React.Component {
     }
 
     submitForm = (ev) => {
-        ev.preventDefault()
+        // ev.preventDefault()
+        
+        // this.setState({email:{sentAt:new Date()}})
         emailService.addEmail(this.state.email)
         // console.log(this.state.email)
     }

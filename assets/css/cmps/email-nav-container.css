@@ -4,13 +4,13 @@
 
 
 .email-nav-container .compose-btn{
-    width: 70%;
+    width: 90%;
     margin-bottom: 10px;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 .email-nav-container .email-nav-btn{
-    width: 60%;
+    width: 80%;
     margin-bottom: 10px;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }

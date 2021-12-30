@@ -25,12 +25,12 @@ export function EmailPreview({ email }) {
         // </div>
 
 
-        <article className={`email-preview ${isReadClass}`} id={id}>
+        <div className={`email-preview ${isReadClass}`} id={id}>
         <p>&#9733;</p>
         <p>{to}</p>
         <p>{subject}</p>
         <p>{formattedTime}</p>
-        </article>
+        </div>
     )
 }
 
