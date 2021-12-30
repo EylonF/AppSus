@@ -17,10 +17,10 @@ export class AddNote extends React.Component {
         const { type } = this.state
         return (
             <div className="note-add-main">
-                <button value="text" onClick={this.handleChange}>Note</button>
-                <button value="img" onClick={this.handleChange}>Image</button>
-                <button value="todos" onClick={this.handleChange}>Todos</button>
-                <button value="video" onClick={this.handleChange}>Video</button>
+                <button className="btn-home1" value="text" onClick={this.handleChange}>Note</button>
+                <button className="btn-home2" value="img" onClick={this.handleChange}>Image</button>
+                <button className="btn-home1" value="todos" onClick={this.handleChange}>Todos</button>
+                <button className="btn-home2" value="video" onClick={this.handleChange}>Video</button>
                 <DynamicTodoAdd 
                 loadNotes={loadNotes} 
                 onAddNote={onAddNote}

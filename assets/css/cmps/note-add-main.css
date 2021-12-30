@@ -1,4 +1,11 @@
+@font-face {
+    font-family: Bangers;
+    src: url(../../font/Bangers/Bangers-Regular.ttf);
+}
+
 
 .note-add-main {
-    display: flex;
+    text-align: center;
+    font-family: Bangers;
+    font-size: 2.2rem;
 }

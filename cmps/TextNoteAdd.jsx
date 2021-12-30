@@ -23,7 +23,7 @@ export class TextNoteAdd extends React.Component {
         return (
             <div>
                 <form onSubmit={this.onSubmitNote} action=''>
-                    <label htmlFor='add-text-note'>Add note:</label>
+                    <label htmlFor='add-text-note'>Add note :</label>
                     <input
                         type='text'
                         onChange={this.handleChange}
@@ -31,7 +31,7 @@ export class TextNoteAdd extends React.Component {
                         name='input'
                         value={input}
                     />
-                    <button>Add Text-Note</button>
+                    <button className="add-btn">Add Text-Note</button>
                 </form>
             </div>
         )
