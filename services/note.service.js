@@ -42,7 +42,7 @@ const gNotes = [
         type: "note-video",
         info: {
             url: "https://www.youtube.com/embed/GiJki1YyptE",
-            title: "mussssssssse"
+            title: "👑בריייייי ה"
         },
     },
 ];

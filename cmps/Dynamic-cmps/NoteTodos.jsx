@@ -7,9 +7,9 @@ export function NoteTodos(note) {
 
     return (
         <article className="card-note card text-dark bg-warning mb-3">
-            <h2>{info.label}</h2>
+            <h2 contenteditable="true">{info.label}</h2>
             <ul>
-                {info.todos.map(todo => <li>{todo.txt}</li>)}
+                {info.todos.map(todo => <li contenteditable="true">{todo.txt}</li>)}
             </ul>
 
 
