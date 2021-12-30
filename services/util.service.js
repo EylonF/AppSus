@@ -3,11 +3,16 @@ export const utilService = {
 }
 
 function getFormattedTime(timestamp) {
-    const date = Date.parse(timestamp);
-    const month = date.getMonth();
-    const day = date.getDay();
+   const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
 
-    const formattedTime = `${month} ${day}` 
-    return Promise.resolve(formattedTime)
+    const date = new Date(timestamp);
+    // console.log(date)
+    const month = date.getMonth();
+    const day = date.getDate();
+
+    const formattedTime = `${monthNames[month]} ${day}`
+    return formattedTime
 
 }
