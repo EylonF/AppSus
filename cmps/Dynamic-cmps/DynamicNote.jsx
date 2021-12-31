@@ -4,17 +4,17 @@ import { NoteTodos } from './NoteTodos.jsx'
 import { NoteVideo } from './NoteVideo.jsx'
 
 
-export function DynamicNote(note){
+export function DynamicNote({note, onDeleteNote, noteColor}){
     
-    switch (note.note.type) {
+    switch (note.type) {
         case "note-txt":
-            return <NoteText {...note} />
+            return <NoteText note={note} onDeleteNote={onDeleteNote} noteColor={noteColor} />
         case "note-img":
-            return <NoteImg {...note} />
-        case "note-todos":
-            return <NoteTodos {...note} />
+            return <NoteImg note={note} onDeleteNote={onDeleteNote} noteColor={noteColor} />
+        // case "note-todos":
+        //     return <NoteTodos note={note} onDeleteNote={onDeleteNote} noteColor={noteColor} />
         case "note-video":
-            return <NoteVideo {...note} />
+            return <NoteVideo note={note} onDeleteNote={onDeleteNote} noteColor={noteColor} />
            
 
             default:

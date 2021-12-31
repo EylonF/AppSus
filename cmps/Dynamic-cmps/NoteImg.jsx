@@ -1,11 +1,13 @@
+// import { NoteActionBar } from "../NoteActionBar.jsx"
 
-export function NoteImg(note){
-    const {info , isPinned, id, style } = note.note
-
+export function NoteImg({note, onDeleteNote ,noteColor}){
+   
     return (
-        <article className="card-note card text-white bg-success mb-3">
-            <h3 contenteditable="true">{info.title}</h3>
-            <img src={info.url} alt="" />
+        <article className="card-note card text-white" style={{ backgroundColor: noteColor }} >
+            <h3 contenteditable="true">{note.info.title}</h3>
+            <img src={note.info.url} alt="" />
+            {/* <NoteActionBar note={note} onDeleteNote={onDeleteNote}/ */}
+        
         </article>
     )
 }

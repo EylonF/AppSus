@@ -1,18 +1,18 @@
+// import { NoteActionBar } from "../NoteActionBar.jsx"
 
-
-export function NoteTodos(note) {
-    const { info, isPinned, id, } = note.note
-    const todoTxt = info.todos.map(todo => todo.txt)
+export function NoteTodos({note, onDeleteNote, noteColor}) {
+    
+    // const todoTxt = info.todos.map(todo => todo.txt)
+  
 
 
     return (
-        <article className="card-note card text-dark bg-warning mb-3">
-            <h2 contenteditable="true">{info.label}</h2>
+        <article className="card-note card text-dark" style={{ backgroundColor: noteColor }} >
+            <h2 contenteditable="true">{note.info.label}</h2>
             <ul>
-                {info.todos.map(todo => <li contenteditable="true">{todo.txt}</li>)}
+                {note.info.todos.map(todo => <li contenteditable="true">{note.todo.txt}</li>)}
             </ul>
-
-
+            {/* <NoteActionBar note={note} onDeleteNote={onDeleteNote}/> */}
         </article>
     )
 }

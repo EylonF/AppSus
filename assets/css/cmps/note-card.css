@@ -1,0 +1,16 @@
+
+.note-btn {
+    display: flex;
+    color: black;
+    font-size: 3rem;
+    background-color: rgba(255, 0, 0, 0);
+    margin: 0;
+    border: none;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.card-note {
+    background-color: inherit;
+    /* margin: 0; */
+}

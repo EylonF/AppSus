@@ -1,10 +1,10 @@
-import {DynamicNote } from './Dynamic-cmps/DynamicNote.jsx'
+import { NotePreview } from './NotePreview.jsx'
 
-export function NoteList({notes}) {
-    console.log('note for list',notes)
+export function NoteList({notes, onDeleteNote}) {
+    // console.log('note for list',notes)
     return (
         <section className="note-list">
-            {notes.map(note => <DynamicNote note={note}/>)}
+            {notes.map(note => <NotePreview note={note} onDeleteNote={onDeleteNote}/>)}
         </section>
     )
 }
