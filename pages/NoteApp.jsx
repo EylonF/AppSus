@@ -22,10 +22,8 @@ export class NoteApp extends React.Component {
         })
     }
 
-    onAddNote = (input, type) => {
-		noteService.addNewNote(input, type).then(() => {
-			this.loadNotes();
-		})
+    onAddNote = () => {
+			this.loadNotes();	
 	}
 
 	onDeleteNote = (noteId) => {

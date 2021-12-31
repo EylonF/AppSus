@@ -3,7 +3,6 @@ import { storageService } from './storage.service.js'
 export const noteService = {
     query,
     getNoteId,
-    addNote,
     addNewNote,
 }
 
@@ -80,16 +79,11 @@ function getNoteId(){
 return `e10${notes.length+1}`
 }
 
-function addNote(note){
-    let notes = _loadNotesFromStorage()
-notes.unshift(note)
-_saveNotesToStorage(notes)
-}
 
-function addNewNote(input, type) {
+function addNewNote(note) {
 	let notes = _loadNotesFromStorage();
-	let newNote = _createNotes(input, type);
-	notes.unshift(newNote);
+	// let newNote = _createNotes(input, type);
+	notes.unshift(note);
 	_saveNotesToStorage(notes);
 	return Promise.resolve();
 }

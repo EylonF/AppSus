@@ -13,30 +13,30 @@ export class TextNoteAdd extends React.Component {
         },
     }
 
-    // handleChange = ({ target }) => {
-    //     const value = target.type === 'number' ? +target.value : target.value;
-    //     this.setState((prevState) => ({ ...prevState, input: value }));
-    //     console.log('this.state.input:', this.state.input);    
-    // };
-    handleChange = ({ target }) => {
-        // const field = target.name
+    
+    handleChange = ({ target }) => {      
         const value = target.value
         this.setState((prevState) => ({ note: { ...prevState.note, info:{txt:value} } }))
-        // console.log(this.state.note.info.txt)
     };
 
 
     onSubmitNote = (ev) => {
         ev.preventDefault();
-        // const { input, type } = this.state;
-        // console.log(input, type)
-        // this.props.onAddNote(input, type)
-        noteService.addNote(this.state.note)
-        this.setState({ input: '' });
+        noteService.addNewNote(this.state.note).then(this.setState({
+            note:  {
+                id: noteService.getNoteId(),
+                type: "note-txt",
+                isPinned: false,
+                info: {
+                    txt: ""
+                }
+            }
+        }))
+        this.props.onAddNote()
     };
 
     render() {
-        const { input } = this.state;
+        const { txt } = this.state.note.info;
         return (
             <div>
                 <form onSubmit={this.onSubmitNote} action=''>
@@ -46,7 +46,7 @@ export class TextNoteAdd extends React.Component {
                         onChange={this.handleChange}
                         id='add-text-note'
                         name='input'
-                        value={input}
+                        value={txt}
                     />
                     <button className="add-btn">Add Note</button>
                 </form>
