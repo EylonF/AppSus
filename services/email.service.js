@@ -108,9 +108,16 @@ return `e10${emails.length+1}`
 }
 
 function addEmail(email){
-    let emails = _loadEmailsFromStorage()
-emails.unshift(email)
-_saveEmailsToStorage(emails)
-return Promise.resolve()
+    console.log('email',email)
+    if (!email.subject === '' || !email.to === '' || !email.body === ''){
+        
+        let emails = _loadEmailsFromStorage()
+        emails.unshift(email)
+        _saveEmailsToStorage(emails)
+        return Promise.resolve()
+        
+    }else{
+        return Promise.reject()
+    } 
  
 }
