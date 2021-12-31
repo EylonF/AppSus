@@ -2,11 +2,17 @@
 export class TodoNoteAdd extends React.Component {
 
     state = {
-        todo: {
-            list: '',
-            lable: ''
+        note:    {
+            id: "n103",
+            type: "note-todos",
+            info: {
+                label: "Get my stuff together",
+                todos: [
+                    { txt: "Driving liscence", doneAt: null },
+                    { txt: "Coding power", doneAt: 187111111 }
+                ]
+            }
         },
-        type: 'note-todos'
     }
 
     handleChange = (event) => {
