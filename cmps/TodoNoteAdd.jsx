@@ -1,15 +1,16 @@
+import {noteService} from '../services/note.service.js'
 
 export class TodoNoteAdd extends React.Component {
 
     state = {
         note:    {
-            id: "n103",
+            id: noteService.getNoteId(),
             type: "note-todos",
             info: {
-                label: "Get my stuff together",
+                label: "",
                 todos: [
-                    { txt: "Driving liscence", doneAt: null },
-                    { txt: "Coding power", doneAt: 187111111 }
+                    { txt: "", doneAt: null },
+                    { txt: "", doneAt: null }
                 ]
             }
         },
@@ -18,42 +19,65 @@ export class TodoNoteAdd extends React.Component {
     handleChange = (event) => {
         const target = event.target;
         const field = target.name;
-        const value = target.type === 'number' ? +target.value : target.value;
-        this.setState((prevState) => ({
-            todo: { ...prevState.todo, [field]: value },
-        }));
-    };
+        const value = target.value;
+        if(field==='label') {
+
+            this.setState((prevState) => ({
+                note: { ...prevState.note, info: {[field]:value} },
+                
+            }));
+        } else {
+        //     this.setState((prevState) => ({
+        //         note: { ...prevState.note, info: {[field]:[0].txt:value} },
+                
+        //     }));
+        // }
+        };
 
 
     onSubmit = (ev) => {
         ev.preventDefault();
-        const { todo, type } = this.state;
-        this.props.onAddNote(todo, type)
-        this.setState({ list: '', lable:'' });
+        noteService.addNewNote(this.state.note).then(this.setState({
+            note:    {
+                id: noteService.getNoteId(),
+                type: "note-todos",
+                info: {
+                    label: "",
+                    todos: [
+                        { txt: "", doneAt: null },
+                        { txt: "", doneAt: null }
+                    ]
+                }
+            }
+        }))
+        this.props.onAddNote()
 
     };
 
     render() {
-        const { list, lable } = this.state;
+        const { label } = this.state.note.info;
+        const { txt } = this.state.note.info.todos;
         return (
             <div>
                 <form onSubmit={this.onSubmit} action=''>
-                    <label htmlFor="note-todo-label-add">Lable :</label>
+                    <label htmlFor="note-todo-label-add"></label>
                     <input
                         type="text"
                         onChange={this.handleChange}
                         id="note-list-label-add"
-                        name="lable"
-                        value={lable}
+                        name="label"
+                        value={label}
+                        placeholder="Title"
 
                     />
-                    <label htmlFor="note-todo-list-add">Enter list :</label>
+                    <label htmlFor="note-todo-list-add"></label>
                     <input
                         type='text'
                         onChange={this.handleChange}
                         id='note-todo-list-add'
                         name='list'
-                        value={list}
+                        value={txt}
+                        placeholder="What Todo..."
                     />
 
                     <button className="add-btn">Add List</button>
