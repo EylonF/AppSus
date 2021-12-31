@@ -111,4 +111,6 @@ function addEmail(email){
     let emails = _loadEmailsFromStorage()
 emails.unshift(email)
 _saveEmailsToStorage(emails)
+return Promise.resolve()
+ 
 }
