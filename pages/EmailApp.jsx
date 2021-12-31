@@ -26,22 +26,19 @@ export class EmailApp extends React.Component {
         const { filterBy } = this.state
         console.log('filter by from loadmails', filterBy)
         emailService.query(filterBy).then(emails => {
-            // eventBusService.emit('books-count', books.length)
-
-            // console.log(emails)
+     
             this.setState({ emails })
         })
     }
 
     onSetFilter = (value) => {
-        // console.log('value',value)
-        // this.setState({filterBy},this.loadEmails)
+     
         this.setState((prevState) => ({ filterBy: { ...prevState.filterBy, status: value.status } }), () => {
             this.loadEmails()
         })
     }
 
-    onComposeEmail = (email) => {
+    onComposeEmail = () => {
         this.loadEmails()
     }
 

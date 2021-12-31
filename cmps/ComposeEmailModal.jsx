@@ -22,10 +22,17 @@ export class ComposeEmailModal extends React.Component {
 
     submitForm = (ev) => {
         ev.preventDefault()
-        
-        // this.setState({email:{sentAt:new Date()}})
-        emailService.addEmail(this.state.email)
-        // console.log(this.state.email)
+        emailService.addEmail(this.state.email).then(this.setState({email:{
+            id: emailService.getEmailId(),
+            subject: '',
+            body: '',
+            isRead: false,
+            isStared: false,
+            sentAt: new Date(),
+            to: '',
+            from: 'Mahatma Appsus'
+        }}))
+        this.props.onComposeEmail()
     }
     
     handleChange = ({ target }) => {
@@ -37,6 +44,7 @@ export class ComposeEmailModal extends React.Component {
 
 
     render() {
+        const {subject, body, to} = this.state.email
         return (
             <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div className="modal-dialog">
@@ -50,15 +58,15 @@ export class ComposeEmailModal extends React.Component {
                             <div className="modal-body">
                                 <div class="mb-3">
                                     <label for="to-input" class="form-label">To:</label>
-                                    <input type="email" class="form-control" id="to-input" name="to" placeholder="name@example.com" onChange={this.handleChange}/>
+                                    <input type="email" class="form-control" id="to-input" name="to" value={to} placeholder="name@example.com" onChange={this.handleChange}/>
                                 </div>
                                 <div class="mb-3">
                                     <label for="subject-input" class="form-label">Subject:</label>
-                                    <input type="text" class="form-control" id="subject-input" name="subject" onChange={this.handleChange}/>
+                                    <input type="text" class="form-control" id="subject-input" name="subject" value={subject} onChange={this.handleChange}/>
                                 </div>
                                 <div class="mb-3">
                                     <label for="textarea-input" class="form-label">Textarea:</label>
-                                    <textarea class="form-control" id="textarea-input" name="body" rows="4" onChange={this.handleChange}></textarea>
+                                    <textarea class="form-control" id="textarea-input" name="body" value={body} rows="4" onChange={this.handleChange}></textarea>
                                 </div>
                             </div>
                             <div className="modal-footer">
