@@ -40,13 +40,14 @@ export class TextNoteAdd extends React.Component {
         return (
             <div>
                 <form onSubmit={this.onSubmitNote} action=''>
-                    <label htmlFor='add-text-note'>Enter Note :</label>
+                    <label htmlFor='add-text-note'></label>
                     <input
                         type='text'
                         onChange={this.handleChange}
                         id='add-text-note'
                         name='input'
                         value={txt}
+                        placeholder="Say something..."
                     />
                     <button className="add-btn">Add Note</button>
                 </form>
