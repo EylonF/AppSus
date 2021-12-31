@@ -17,10 +17,9 @@ export class NoteApp extends React.Component {
 
     loadNotes = () => {
         noteService.query().then(notes => {
-            console.log('notes:', notes);
+            // console.log('notes:', notes);
             this.setState({notes})
         })
-
     }
 
     onAddNote = (input, type) => {

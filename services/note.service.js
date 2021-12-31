@@ -4,6 +4,7 @@ export const noteService = {
     query,
     getNoteId,
     addNote,
+    addNewNote,
 }
 
 const STORAGE_KEY = 'noteDB'
@@ -83,4 +84,12 @@ function addNote(note){
     let notes = _loadNotesFromStorage()
 notes.unshift(note)
 _saveNotesToStorage(notes)
+}
+
+function addNewNote(input, type) {
+	let notes = _loadNotesFromStorage();
+	let newNote = _createNotes(input, type);
+	notes.unshift(newNote);
+	_saveNotesToStorage(notes);
+	return Promise.resolve();
 }
