@@ -1,13 +1,12 @@
-import { NoteActionBar } from "../NoteActionBar.jsx"
+// import { NoteActionBar } from "../NoteActionBar.jsx"
 
-export function NoteText({note, onDeleteNote}){
+export function NoteText({note, onDeleteNote, noteColor}){
     
 
     return (
-        <article className="card-note card text-white bg-danger mb-3">
+        <article className="card-note card text-white" style={{ backgroundColor: noteColor }}  >
             <h1 className="note-text" contenteditable="true">{note.info.txt}</h1>
-            <NoteActionBar note={note} onDeleteNote={onDeleteNote}/>
-
+            {/* <NoteActionBar note={note} onDeleteNote={onDeleteNote}/> */}
         </article>
     )
 }
