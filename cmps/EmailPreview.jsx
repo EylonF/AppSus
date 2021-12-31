@@ -2,35 +2,48 @@ import { utilService } from '../services/util.service.js'
 
 export function EmailPreview({ email }) {
     // console.log('email from preview', email)
-    const { id, subject, body, isRead, sentAt, to } = email
+    const { id, subject, body, isRead, sentAt, to, from } = email
 
     let formattedTime = utilService.getFormattedTime(sentAt)
     const isReadClass = (isRead) ? 'email-read' : ''
     return (
+        <React.Fragment>
+            <button type="button" class={`btn btn-outline-secondary email-preview ${isReadClass}`} id={id} data-bs-toggle="modal" data-bs-target={`#Email${id}Modal`}>
+                {/* <p>&#9733;</p> */}
+                {/* <i class="bi bi-star"></i> */}
+                <p>{to}</p>
+                <p>{subject}</p>
+                <p>{formattedTime}</p>
+            </button>
 
-        // <div class={`accordion-item email-preview ${isReadClass}`}>
-        //     <h2 class="accordion-header" id="headingOne">
-        //         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        //             <p>&#9733;</p>
-        //             <p>{to}</p>
-        //             <p>{subject}</p>
-        //             <p>{formattedTime}</p>
-        //         </button>
-        //     </h2>
-        //     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-        //         <div class="accordion-body">
-        //             <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-        //         </div>
-        //     </div>
+
+            <div class="modal fade" id={`Email${id}Modal`} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">From: {from}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>{subject}</h4>
+                            <p>{body}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <small>Sent To: {to} | {formattedTime}</small>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </React.Fragment>
+
+
+        // <div className={`email-preview ${isReadClass}`} id={id}>
+        // {/* <p>&#9733;</p> */}
+        // <p>{to}</p>
+        // <p>{subject}</p>
+        // <p>{formattedTime}</p>
         // </div>
-
-
-        <div className={`email-preview ${isReadClass}`} id={id}>
-        <p>&#9733;</p>
-        <p>{to}</p>
-        <p>{subject}</p>
-        <p>{formattedTime}</p>
-        </div>
     )
 }
 
