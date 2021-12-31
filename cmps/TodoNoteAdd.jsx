@@ -20,20 +20,24 @@ export class TodoNoteAdd extends React.Component {
         const target = event.target;
         const field = target.name;
         const value = target.value;
-        if(field==='label') {
 
-            this.setState((prevState) => ({
-                note: { ...prevState.note, info: {[field]:value} },
+        this.setState((prevState) => ({ note:{...prevState.note,info:{ ...prevState.note.info, }} ,
+        }))
+
+        // if(field==='label') {
+
+        //     this.setState((prevState) => ({
+        //         note: { ...prevState.note, info: {[field]:value} },
                 
-            }));
-        } else {
+        //     }));
+        // } else {
         //     this.setState((prevState) => ({
         //         note: { ...prevState.note, info: {[field]:[0].txt:value} },
                 
         //     }));
         // }
-        };
-
+        // };
+    }
 
     onSubmit = (ev) => {
         ev.preventDefault();
