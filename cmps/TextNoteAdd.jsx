@@ -3,8 +3,6 @@ import {noteService} from '../services/note.service.js'
 export class TextNoteAdd extends React.Component {
 
     state = {
-        // input: '',
-        // type: 'note-txt',
       note:  {
             id: noteService.getNoteId(),
             type: "note-txt",
