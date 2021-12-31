@@ -32,7 +32,7 @@ export class ImgNoteAdd extends React.Component {
         return (
             <div>
                 <form onSubmit={this.onSubmit} action=''>
-                    <label htmlFor="note-img-add">Enter Image URL :</label>
+                    <label htmlFor="note-img-add">Enter Imag link :</label>
                     <input
                         type="text"
                         onChange={this.handleChange}

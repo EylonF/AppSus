@@ -24,7 +24,7 @@ export class TextNoteAdd extends React.Component {
         // const field = target.name
         const value = target.value
         this.setState((prevState) => ({ note: { ...prevState.note, info:{txt:value} } }))
-        console.log(this.state.note.info.txt)
+        // console.log(this.state.note.info.txt)
     };
 
 
@@ -42,7 +42,7 @@ export class TextNoteAdd extends React.Component {
         return (
             <div>
                 <form onSubmit={this.onSubmitNote} action=''>
-                    <label htmlFor='add-text-note'>Add note :</label>
+                    <label htmlFor='add-text-note'>Enter Note :</label>
                     <input
                         type='text'
                         onChange={this.handleChange}
@@ -50,7 +50,7 @@ export class TextNoteAdd extends React.Component {
                         name='input'
                         value={input}
                     />
-                    <button className="add-btn">Add Text-Note</button>
+                    <button className="add-btn">Add Note</button>
                 </form>
             </div>
         )
