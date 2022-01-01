@@ -74,7 +74,7 @@ const gNotes = [
         type: "note-img",
         info: {
             url: "https://media-exp1.licdn.com/dms/image/C4D03AQF_dzAW9tEmVg/profile-displayphoto-shrink_800_800/0/1592643510622?e=1646265600&v=beta&t=zHeZrirw_r_PgVecoB3T_wZcIv7M4Jm5ZFQHMuy0rPg",
-            title: "my BFF"
+            title: "my BFF 💘"
         },
         style: {
             backgroundColor: "#DB6B97"

@@ -31,13 +31,14 @@ export class NotePreview extends React.Component {
                     onDeleteNote={onDeleteNote}
                     note={note}
                     noteColor={noteColor}
+                    onChangeNoteColor={this.onChangeNoteColor}
                     
                 />
-                <NoteActionBar 
+                {/* <NoteActionBar 
                 onDeleteNote={onDeleteNote}
                 note={note}
                 onChangeNoteColor={this.onChangeNoteColor}
-                />
+                /> */}
                 
                 {/* <button onClick={() => this.props.onDeleteNote(note.id)}>Delete Note</button>
                 <ColorInput note={note} onChangeNoteColor={this.onChangeNoteColor} /> */}
