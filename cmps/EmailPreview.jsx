@@ -13,7 +13,7 @@ export function EmailPreview({ email, onDeleteEmail }) {
             <button type="button" class={`btn btn-outline-secondary email-preview ${isReadClass}`} id={id} data-bs-toggle="modal" data-bs-target={`#Email${id}Modal`}>
                 {/* <p>&#9733;</p> */}
                 {/* <i class="bi bi-star"></i> */}
-                <p>{to}</p>
+                <p>{from}</p>
                 <p>{formatedSubject}</p>
                 <p>{formattedTime}</p>
             </button>

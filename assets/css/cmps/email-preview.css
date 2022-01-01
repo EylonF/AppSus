@@ -16,7 +16,7 @@
 
 .email-preview{
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 40% 40% 20%;
     font-weight: bold;
     width: 85%;
     border: 1px solid #292929;
@@ -28,5 +28,10 @@
 .email-preview.email-read{
     
     font-weight: normal;
+}
+
+.modal-body p {
+    font-size: 1.6rem;
+    margin: 30px 5px;
 }
 
