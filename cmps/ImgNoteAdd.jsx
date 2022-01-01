@@ -1,9 +1,9 @@
-import {noteService} from '../services/note.service.js'
+import { noteService } from '../services/note.service.js'
 
 export class ImgNoteAdd extends React.Component {
 
     state = {
-        note:  {
+        note: {
             id: noteService.getNoteId(),
             type: "note-img",
             info: {
@@ -16,21 +16,21 @@ export class ImgNoteAdd extends React.Component {
         }
     }
 
-     handleChange = (event) => {
+    handleChange = (event) => {
         const target = event.target;
         const field = target.name;
         const value = target.value;
-        
-        this.setState((prevState) => ({ note:{...prevState.note,info:{ ...prevState.note.info, [field]:value }} ,
+
+        this.setState((prevState) => ({
+            note: { ...prevState.note, info: { ...prevState.note.info, [field]: value } },
         }));
 
     };
-    // info:{[field]:value}
 
     onSubmit = (ev) => {
-        ev.preventDefault();      
+        ev.preventDefault();
         noteService.addNewNote(this.state.note).then(this.setState({
-            note:  {
+            note: {
                 id: noteService.getNoteId(),
                 type: "note-img",
                 info: {

@@ -46,7 +46,6 @@ export class ComposeEmailModal extends React.Component {
         ).catch(console.log('somting went wrong'))
         this.props.onComposeEmail()
     }
-    // this.setState((prevState)=>({...prevState,emailSent: false}))
     handleChange = ({ target }) => {
         const field = target.name
         const value = target.value
@@ -60,7 +59,6 @@ setTimeout(() => {
     this.setState((prevState) => ({ ...prevState, emailSent: false }))
 }, 2000);
 
-        // console.log('toogle modal', this.state.emailSent)
     }
 
 
@@ -76,7 +74,6 @@ setTimeout(() => {
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         {(emailSent) && < UserMsg msg='email successfully sent' type='success' />}
-                        {/* {(!emailSent) && < UserMsg msg='somthing went wrong' type='danger'/>} */}
 
                         <form onSubmit={this.submitForm}>
                             <div className="modal-body">

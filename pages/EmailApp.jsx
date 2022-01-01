@@ -12,9 +12,9 @@ export class EmailApp extends React.Component {
         emails: [],
         filterBy: {
             status: 'inbox',
-            txt: '', // no need to support complex text search
-            isRead: false, // (optional property, if missing: show all)
-            isStared: false, // (optional property, if missing: show all)
+            txt: '', 
+            isRead: false,
+            isStared: false, 
         },
 
 

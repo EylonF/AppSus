@@ -1,18 +1,14 @@
 import { utilService } from '../services/util.service.js'
 
 export function EmailPreview({ email, onDeleteEmail }) {
-    // console.log('email from preview', email)
     const { id, subject, body, isRead, sentAt, to, from } = email
     const formatedSubject = utilService.getFormatedSubject(subject)
     let formattedTime = utilService.getFormattedTime(sentAt)
     const isReadClass = (isRead) ? 'email-read' : ''
     return (
-        // <React.Fragment>
         <div className='email-preview-container'>
 
             <button type="button" class={`btn btn-outline-secondary email-preview ${isReadClass}`} id={id} data-bs-toggle="modal" data-bs-target={`#Email${id}Modal`}>
-                {/* <p>&#9733;</p> */}
-                {/* <i class="bi bi-star"></i> */}
                 <p>{from}</p>
                 <p>{formatedSubject}</p>
                 <p>{formattedTime}</p>
@@ -41,15 +37,7 @@ export function EmailPreview({ email, onDeleteEmail }) {
                 </div>
             </div>
         </div>
-        // </React.Fragment>
-
-
-        // <div className={`email-preview ${isReadClass}`} id={id}>
-        // {/* <p>&#9733;</p> */}
-        // <p>{to}</p>
-        // <p>{subject}</p>
-        // <p>{formattedTime}</p>
-        // </div>
+      
     )
 }
 

@@ -1,14 +1,11 @@
 import { ComposeEmailModal } from './ComposeEmailModal.jsx';
 
-const { NavLink, Link } = ReactRouterDOM
-
-
 export class EmailNavBar extends React.Component {
 
     state = {
         filterBy: {
             status: 'inbox',
-            isStared: false, // (optional property, if missing: show all)
+            isStared: false,
         }
 
     }

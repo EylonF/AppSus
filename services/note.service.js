@@ -181,7 +181,6 @@ function getNoteId() {
 
 function addNewNote(note) {
     let notes = _loadNotesFromStorage();
-    // let newNote = _createNotes(input, type);
     notes.unshift(note);
     _saveNotesToStorage(notes);
     return Promise.resolve();
