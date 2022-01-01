@@ -7,7 +7,7 @@ export function NoteTodos({note, onDeleteNote, noteColor}) {
 
 
     return (
-        <article className="card-note card text-dark" style={{ backgroundColor: noteColor }} >
+        <article className="card-note" style={{ backgroundColor: noteColor }} >
             <h2 contenteditable="true">{note.info.label}</h2>
             <ul>
                 {note.info.todos.map(todo => <li contenteditable="true">{note.todo.txt}</li>)}

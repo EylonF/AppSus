@@ -10,7 +10,26 @@
     margin-left: 1rem;
 }
 
+
 .card-note {
+    margin: 0;
+    min-width: 400px;
+    display: inline-block;
+    min-height: 200px;
+    text-align: center;
     background-color: inherit;
-    /* margin: 0; */
+    
+}
+
+
+.card-note img{
+    max-width: 350px;
+    margin-bottom: 20px;
+}
+
+
+
+.card-note h1{
+    font-size: 2rem;
+    margin-top: 60px;
 }

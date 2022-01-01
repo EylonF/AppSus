@@ -17,7 +17,10 @@ const gNotes = [
         isPinned: true,
         info: {
             txt: "Fullstack Me Baby!"
-        }
+        },
+        style: {
+            backgroundColor: "#FF4848"
+        },
     },
     {
         id: "n102",
@@ -27,8 +30,8 @@ const gNotes = [
             title: "my first basket"
         },
         style: {
-            backgroundColor: "#00d"
-        }
+            backgroundColor: "#D6E5FA"
+        },
     },
     {
         id: "n103",
@@ -39,7 +42,10 @@ const gNotes = [
                 { txt: "Driving liscence", doneAt: null },
                 { txt: "Coding power", doneAt: 187111111 }
             ]
-        }
+        },
+        style: {
+            backgroundColor: "#BAABDA"
+        },
     },
     {
         id: "n104",
@@ -47,6 +53,9 @@ const gNotes = [
         info: {
             url: "https://www.youtube.com/embed/GiJki1YyptE",
             title: "👑בריייייי ה"
+        },
+        style: {
+            backgroundColor: "#D77FA1"
         },
     },
 ];
