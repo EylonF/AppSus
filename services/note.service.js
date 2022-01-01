@@ -16,7 +16,7 @@ const gNotes = [
         type: "note-txt",
         isPinned: true,
         info: {
-            txt: "Fullstack Me Baby!"
+            txt: "remember to remember"
         },
         style: {
             backgroundColor: "#FF4848"
@@ -27,7 +27,7 @@ const gNotes = [
         type: "note-img",
         info: {
             url: "https://www.picshare.co.il/m_pictures/img71865.jpg",
-            title: "my first basket"
+            title: "my basket"
         },
         style: {
             backgroundColor: "#D6E5FA"
@@ -55,7 +55,62 @@ const gNotes = [
             title: "👑בריייייי ה"
         },
         style: {
-            backgroundColor: "#D77FA1"
+            backgroundColor: "#C6D57E"
+        },
+    },
+    {
+        id: "n105",
+        type: "note-img",
+        info: {
+            url: "https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/2/poolside-glamour-slim-aarons.jpg",
+            title: "pool party bitches"
+        },
+        style: {
+            backgroundColor: "#FFD371"
+        },
+    },
+    {
+        id: "n106",
+        type: "note-img",
+        info: {
+            url: "https://media-exp1.licdn.com/dms/image/C4D03AQF_dzAW9tEmVg/profile-displayphoto-shrink_800_800/0/1592643510622?e=1646265600&v=beta&t=zHeZrirw_r_PgVecoB3T_wZcIv7M4Jm5ZFQHMuy0rPg",
+            title: "my BFF"
+        },
+        style: {
+            backgroundColor: "#DB6B97"
+        },
+    },
+    {
+        id: "n107",
+        type: "note-video",
+        info: {
+            url: "https://www.youtube.com/embed/nVmyRmvQo9s",
+            title: "For Dark Days"
+        },
+        style: {
+            backgroundColor: "#A3423C"
+        },
+    },
+    {
+        id: "n108",
+        type: "note-txt",
+        isPinned: true,
+        info: {
+            txt: "its all about the 💰"
+        },
+        style: {
+            backgroundColor: "#F0D290"
+        },
+    },
+    {
+        id: "n109",
+        type: "note-video",
+        info: {
+            url: "https://www.youtube.com/embed/BGbNizFVz-I",
+            title: "edge of guedj"
+        },
+        style: {
+            backgroundColor: "#6E85B2"
         },
     },
 ];

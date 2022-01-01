@@ -12,10 +12,10 @@
 
 
 .card-note {
-    margin: 0;
-    min-width: 400px;
+    min-width: 300px;
+    max-width: 300px;
     display: inline-block;
-    min-height: 200px;
+    min-height: 150px;
     text-align: center;
     background-color: inherit;
     
@@ -23,8 +23,9 @@
 
 
 .card-note img{
-    max-width: 350px;
+    max-width: 250px;
     margin-bottom: 20px;
+    margin: 20px;
 }
 
 
