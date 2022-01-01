@@ -1,12 +1,29 @@
+.email-preview-container{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+.email-preview-container .btn-star,.btn-trash{
+    border: 1px solid #292929;
+    font-size: 1.4rem;
+    color: black ;
+    width: 7%;
+    margin-bottom: 1px;
+}
+.email-preview-container .btn-star:hover{
+    color: #fff;
+}
+
 .email-preview{
     display: grid;
     grid-template-columns: 30% 30% 30%;
     font-weight: bold;
-    width: 100%;
+    width: 85%;
     border: 1px solid #292929;
     font-size: 1.4rem;
     padding: 5px;
     background-color: #fff;
+    margin-bottom: 1px;
 }
 .email-preview.email-read{
     

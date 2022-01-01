@@ -7,7 +7,9 @@ export function EmailPreview({ email }) {
     let formattedTime = utilService.getFormattedTime(sentAt)
     const isReadClass = (isRead) ? 'email-read' : ''
     return (
-        <React.Fragment>
+        // <React.Fragment>
+        <div className='email-preview-container'>
+
             <button type="button" class={`btn btn-outline-secondary email-preview ${isReadClass}`} id={id} data-bs-toggle="modal" data-bs-target={`#Email${id}Modal`}>
                 {/* <p>&#9733;</p> */}
                 {/* <i class="bi bi-star"></i> */}
@@ -15,6 +17,9 @@ export function EmailPreview({ email }) {
                 <p>{subject}</p>
                 <p>{formattedTime}</p>
             </button>
+
+            <button type="button" class="btn btn-star btn-warning"><i class="bi bi-star-fill"></i></button>
+            <button type="button" class="btn btn-trash btn-danger"><i class="bi bi-trash-fill"></i></button>
 
 
             <div class="modal fade" id={`Email${id}Modal`} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -35,7 +40,8 @@ export function EmailPreview({ email }) {
                     </div>
                 </div>
             </div>
-        </React.Fragment>
+        </div>
+        // </React.Fragment>
 
 
         // <div className={`email-preview ${isReadClass}`} id={id}>
