@@ -27,18 +27,18 @@ export class TodoNoteAdd extends React.Component {
 
     onSubmit = (ev) => {
         ev.preventDefault();
-        const label = this.state.note.info.label
-        noteService.addNewNote(this.state.note).then(this.setState({
-            note: {
-                id: noteService.getNoteId(),
-                type: "note-todos",
-                info: {
-                    label: label,
-                    todo: ''
-                }
-            }
-        }))
-        this.props.onAddNote()
+        // const label = this.state.note.info.label
+        // noteService.addNewNote(this.state.note).then(this.setState({
+        //     note: {
+        //         id: noteService.getNoteId(),
+        //         type: "note-todos",
+        //         info: {
+        //             label: label,
+        //             todo: ''
+        //         }
+        //     }
+        // }))
+        // this.props.onAddNote()
 
     };
 

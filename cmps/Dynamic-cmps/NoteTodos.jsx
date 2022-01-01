@@ -34,7 +34,7 @@ export class NoteTodos extends React.Component {
             <article className="card-note" style={{ backgroundColor: noteColor }} >
                 <h2 contenteditable="true">{note.info.label}</h2>
                 {todos.map(todo => <TodoPreview todo={todo} />)}
-                <button className="btn btn-primary"><i class="bi bi-clipboard-plus"></i></button>
+                {/* <button className="btn btn-primary"><i class="bi bi-clipboard-plus"></i></button> */}
                 <NoteActionBar 
                 onDeleteNote={onDeleteNote}
                 note={note}
