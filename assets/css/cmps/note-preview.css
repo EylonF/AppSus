@@ -1,7 +1,15 @@
-
+@font-face {
+    font-family: Passion;
+    src: url('../../font/Passion/PassionOne-Regular.ttf');
+}
+@font-face {
+    font-family: Karantina;
+    src: url('../../font/Karantina/Karantina-Bold.ttf');
+}
 
 .note-preview {
-    background-color: #df999a;
+    /* background-color: #df999a; */
+    margin-bottom: 10px;
 }
 
 .color-editor-input {
@@ -11,4 +19,7 @@
 
 h1, h2, h3, h4 {
     color: black;
+    font-family: Passion, Karantina;
+    text-align: center;
+    font-size: 2.5rem;
 }

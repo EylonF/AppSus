@@ -12,25 +12,28 @@
 
 
 .card-note {
-    min-width: 300px;
-    max-width: 300px;
-    display: inline-block;
-    min-height: 150px;
+    display: inline-block;  
     text-align: center;
     background-color: inherit;
-    
+    width: 100%;
+    padding: 10px 0;
+    min-height: 150px;   
+    transition: 1s;
 }
 
 
 .card-note img{
-    max-width: 250px;
+    width: 90%;
     margin-bottom: 20px;
     margin: 20px;
 }
 
 
-
 .card-note h1{
-    font-size: 2rem;
-    margin-top: 60px;
+    font-size: 2.5rem;
+}
+
+.card-note:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 200px rgb(0, 0, 0);
 }

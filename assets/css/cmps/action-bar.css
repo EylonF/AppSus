@@ -1,7 +1,8 @@
 
 .action-bar {
     display: flex;
-    background-color: #c0b6b6;
+    background-color: #fdfdfd9d;
     padding: 5px;
-    border: black 2px solid;
+    /* border: black 2px solid; */
+    margin-bottom: 0;
 }
