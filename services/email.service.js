@@ -4,6 +4,7 @@ export const emailService = {
     query,
     getEmailId,
     addEmail,
+    deleteEmail,
 }
 
 const STORAGE_KEY = 'emailDB'
@@ -120,4 +121,11 @@ function addEmail(email){
         return Promise.resolve()
     } 
  
+}
+
+function deleteEmail(emailId) {
+    let emails = _loadEmailsFromStorage()
+    emails = emails.filter((email) => email.id !== emailId);
+    _saveEmailsToStorage(emails)
+    return Promise.resolve();
 }
