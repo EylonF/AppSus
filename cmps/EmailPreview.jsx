@@ -1,6 +1,6 @@
 import { utilService } from '../services/util.service.js'
 
-export function EmailPreview({ email }) {
+export function EmailPreview({ email,onDeleteEmail }) {
     // console.log('email from preview', email)
     const { id, subject, body, isRead, sentAt, to, from } = email
 
@@ -19,7 +19,7 @@ export function EmailPreview({ email }) {
             </button>
 
             <button type="button" class="btn btn-star btn-warning"><i class="bi bi-star-fill"></i></button>
-            <button type="button" class="btn btn-trash btn-danger"><i class="bi bi-trash-fill"></i></button>
+            <button type="button" class="btn btn-trash btn-danger" onClick={() => onDeleteEmail(id)}><i class="bi bi-trash-fill"></i></button>
 
 
             <div class="modal fade" id={`Email${id}Modal`} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

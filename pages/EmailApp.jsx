@@ -44,7 +44,11 @@ export class EmailApp extends React.Component {
         this.loadEmails()
     }
 
-    
+    onDeleteEmail = (emailId) => {
+		emailService.deleteEmail(emailId).then(() => {
+			this.loadEmails()
+		})
+	}
 
     render() {
 
@@ -55,7 +59,7 @@ export class EmailApp extends React.Component {
                 <EmailSearchBar searchIn={filterBy.status} />
                 <div className="main-content main-layout">
                     <EmailNavBar onSetFilter={this.onSetFilter} onComposeEmail={this.onComposeEmail} />
-                    <EmailList emails={emails} />
+                    <EmailList emails={emails} onDeleteEmail={this.onDeleteEmail}/>
                 </div>
             </section>
         )
