@@ -1,18 +1,18 @@
-export class ComposeEmailModal extends React.Component {
+// export class ComposeEmailModal extends React.Component {
 
-    state = {
+//     state = {
        
-    }
+//     }
 
-    componentDidMount() {
-    }
+//     componentDidMount() {
+//     }
 
 
-    render() {
+//     render() {
         
-        return (
+//         return (
             
-        )
+//         )
 
-    }
-}
+//     }
+// }
