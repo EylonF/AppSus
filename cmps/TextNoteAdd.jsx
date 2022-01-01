@@ -1,9 +1,9 @@
-import {noteService} from '../services/note.service.js'
+import { noteService } from '../services/note.service.js'
 
 export class TextNoteAdd extends React.Component {
 
     state = {
-      note:  {
+        note: {
             id: noteService.getNoteId(),
             type: "note-txt",
             isPinned: false,
@@ -16,17 +16,17 @@ export class TextNoteAdd extends React.Component {
         },
     }
 
-    
-    handleChange = ({ target }) => {      
+
+    handleChange = ({ target }) => {
         const value = target.value
-        this.setState((prevState) => ({ note: { ...prevState.note, info:{txt:value} } }))
+        this.setState((prevState) => ({ note: { ...prevState.note, info: { txt: value } } }))
     };
 
 
     onSubmitNote = (ev) => {
         ev.preventDefault();
         noteService.addNewNote(this.state.note).then(this.setState({
-            note:  {
+            note: {
                 id: noteService.getNoteId(),
                 type: "note-txt",
                 isPinned: false,
