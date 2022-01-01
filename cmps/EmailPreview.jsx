@@ -1,9 +1,9 @@
 import { utilService } from '../services/util.service.js'
 
-export function EmailPreview({ email,onDeleteEmail }) {
+export function EmailPreview({ email, onDeleteEmail }) {
     // console.log('email from preview', email)
     const { id, subject, body, isRead, sentAt, to, from } = email
-
+    const formatedSubject = utilService.getFormatedSubject(subject)
     let formattedTime = utilService.getFormattedTime(sentAt)
     const isReadClass = (isRead) ? 'email-read' : ''
     return (
@@ -14,7 +14,7 @@ export function EmailPreview({ email,onDeleteEmail }) {
                 {/* <p>&#9733;</p> */}
                 {/* <i class="bi bi-star"></i> */}
                 <p>{to}</p>
-                <p>{subject}</p>
+                <p>{formatedSubject}</p>
                 <p>{formattedTime}</p>
             </button>
 
