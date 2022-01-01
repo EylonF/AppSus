@@ -13,8 +13,8 @@ let gEmails = [
         id: 'e101',
         subject: 'Miss you!',
         body: 'Would love to catch up sometimes',
-        isRead: false,
-        isStared: false,
+        isRead: true,
+        isStared: true,
         sentAt: 1551133930594,
         to: 'momo@momo.com',
         from: 'Mahatma Appsus'
@@ -46,7 +46,7 @@ let gEmails = [
         body: 'Fuck off!',
         isRead: true,
         isStared: true,
-        sentAt: 1640851160009,
+        sentAt: 1577945643,
         to: 'user@appsus.com',
         from: 'koko koko'
 
@@ -57,7 +57,7 @@ let gEmails = [
         body: 'פרויקט חשיפה  הוא מיזם שנועד לתת הזדמנות הדדית לשחקנים ובמאים להכיר זה את זה באוירה מקצועית, ידידותית ומאפשרת. מיועד לשחקנים מקצועיים (רב גילאי) שרוצים להתחדש, להתעדכן ולפגוש מנהלים ובמאי תאטרון עכשוויים.',
         isRead: true,
         isStared: false,
-        sentAt: 1640851160009,
+        sentAt: 1175500944,
         to: 'user@appsus.com',
         from: 'hasbara@shaham.org.il'
 
@@ -68,7 +68,7 @@ let gEmails = [
         body: 'פרטי הרכישה איך לשנות את דעתך / מייקל פולן',
         isRead: true,
         isStared: true,
-        sentAt: 1640851160009,
+        sentAt: 1005876185 ,
         to: 'user@appsus.com',
         from: 'nfo@ybook.co.il'
 
@@ -79,7 +79,7 @@ let gEmails = [
         body: 'Witness the wintry new Island thaw, discover new locations, win Victory Crowns, complete new Quests, plus more',
         isRead: false,
         isStared: false,
-        sentAt: 1640851160009,
+        sentAt: 1092900154,
         to: 'user@appsus.com',
         from: 'fortnite@mail.epicgames.com'
 
@@ -90,7 +90,7 @@ let gEmails = [
         body: 'חברות וחברים יקרים, לאחר כשנתיים בהן לא התקיימה תחרות פרסי אקו"ם, אני שמחים להכריז על תחרות פרסי אקו"ם לשנת 2021/22 ! להלן מספר דגשים, המופיעים בתקנון הפרסים המצורף כאן . אנא קראו בעיון את תקנון הפרסים לפני הגשת המועמדות.',
         isRead: true,
         isStared: true,
-        sentAt: 1640851160009,
+        sentAt: 1095904892,
         to: 'user@appsus.com',
         from: 'members@acum.org.il'
 
@@ -101,7 +101,7 @@ let gEmails = [
         body: 'זוהי פנייה בדיוור ישיר, בהתאם למאגר מידע רשום בבעלות סטימצקי (2005)',
         isRead: false,
         isStared: false,
-        sentAt: 1640851160009,
+        sentAt: 1228194783,
         to: 'user@appsus.com',
         from: 'Mailing@Steimatzky.co.il'
 
@@ -112,9 +112,64 @@ let gEmails = [
         body: 'ב-5 בינואר 2022 נעדכן את התנאים וההגבלות שלנו (להלן "התנאים") לצורך הבהרה וכדי לעזור לך להבין למה לצפות בזמן השימוש בשירות. השינויים לא ישפיעו על אופן השימוש ב-YouTube. ניתן לעיין בסיכום השינויים ובתנאים המעודכנים כאן.',
         isRead: true,
         isStared: true,
-        sentAt: 1640851160009,
+        sentAt: 1461312618,
         to: 'user@appsus.com',
         from: 'no-reply@youtube.com'
+
+    },
+    {
+        id: 'e111',
+        subject: ' קורות חיים עדכניים',
+        body: 'בוגר קודינג אקדמי',
+        isRead: true,
+        isStared: true,
+        sentAt: 1640851160009,
+        to: 'userito@appsus.com',
+        from: 'koko koko'
+
+    },
+    {
+        id: 'e112',
+        subject: 'בוק חדש',
+        body: 'רוצה לצלם בוק חדש מה אומרת?',
+        isRead: true,
+        isStared: true,
+        sentAt: 1068462118,
+        to: 'userito@appsus.com',
+        from: 'koko koko'
+
+    },
+    {
+        id: 'e113',
+        subject: 'טיול לצפון',
+        body: 'בוטל',
+        isRead: true,
+        isStared: true,
+        sentAt: 966289777,
+        to: 'userito@appsus.com',
+        from: 'koko koko'
+
+    },
+    {
+        id: 'e114',
+        subject: 'טיול לדרום',
+        body: 'מתחילים לתכנן',
+        isRead: true,
+        isStared: true,
+        sentAt: 1619594691,
+        to: 'userito@appsus.com',
+        from: 'koko koko'
+
+    },
+    {
+        id: 'e115',
+        subject: 'טיול לדרום עדכון',
+        body: 'בוטל',
+        isRead: true,
+        isStared: true,
+        sentAt: 1640336160009,
+        to: 'userito@appsus.com',
+        from: 'koko koko'
 
     },
 ]
