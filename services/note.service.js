@@ -93,13 +93,13 @@ const gNotes = [
     },
     {
         id: "n108",
-        type: "note-txt",
-        isPinned: true,
+        type: "note-img",
         info: {
-            txt: "its all about the 💰"
+            url: "https://i.ibb.co/28FbTHt/sleep.jpg" ,
+            title: "😂🤣😂"
         },
         style: {
-            backgroundColor: "#F0D290"
+            backgroundColor: "#261C2C"
         },
     },
     {
@@ -111,6 +111,39 @@ const gNotes = [
         },
         style: {
             backgroundColor: "#6E85B2"
+        },
+    },
+    {
+        id: "n110",
+        type: "note-txt",
+        isPinned: true,
+        info: {
+            txt: "its all about the 💰"
+        },
+        style: {
+            backgroundColor: "#F0D290"
+        },
+    },
+    {
+        id: "n111",
+        type: "note-txt",
+        isPinned: true,
+        info: {
+            txt: "לחשוב על סטארטאפ"
+        },
+        style: {
+            backgroundColor: "#95DAC1"
+        },
+    },
+    {
+        id: "n112",
+        type: "note-txt",
+        isPinned: true,
+        info: {
+            txt: "לחשוב על עוד סטארטאפ"
+        },
+        style: {
+            backgroundColor: "#FD6F96"
         },
     },
 ];
