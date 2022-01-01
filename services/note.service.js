@@ -38,10 +38,7 @@ const gNotes = [
         type: "note-todos",
         info: {
             label: "Get my stuff together",
-            todos: [
-                { txt: "Driving liscence", doneAt: null },
-                { txt: "Coding power", doneAt: 187111111 }
-            ]
+            todo: 'do todo'
         },
         style: {
             backgroundColor: "#BAABDA"
@@ -114,6 +111,6 @@ function changeNoteColor(noteId, noteColor) {
         return note
     });
 	_saveNotesToStorage(notes);
-	// return Promise.resolve();
+	return Promise.resolve();
    
 }

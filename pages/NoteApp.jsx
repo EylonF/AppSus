@@ -45,7 +45,6 @@ export class NoteApp extends React.Component {
 					loadNotes={this.loadNotes}
 					onDeleteNote={this.onDeleteNote}
 					notes={notes} />
-          {/* <NoteList notes={notes}/> */}
             </section>
         )
     }

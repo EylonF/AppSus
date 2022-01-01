@@ -8,10 +8,7 @@ export class TodoNoteAdd extends React.Component {
             type: "note-todos",
             info: {
                 label: "",
-                todos: [
-                    { txt: "", doneAt: null },
-                    { txt: "", doneAt: null }
-                ]
+                todo: ''
             },
             style: {
                 backgroundColor: "#BAABDA"
@@ -23,33 +20,21 @@ export class TodoNoteAdd extends React.Component {
         const target = event.target;
         const field = target.name;
         const value = target.value;
-        if (field === 'label') {
-
-            this.setState((prevState) => ({
-                note: { ...prevState.note, info: { [field]: value } },
-
-            }));
-        } else {
-            //     this.setState((prevState) => ({
-            //         note: { ...prevState.note, info: {[field]:[0].txt:value} },
-
-            //     }));
-            // }
-        };
+        this.setState((prevState) => ({ note: { ...prevState.note, info: { [field]: value } } }))
+        console.log('label',this.state.note.info.label)
+        console.log('todo',this.state.note.info.todo)
     }
 
     onSubmit = (ev) => {
         ev.preventDefault();
+        const label = this.state.note.info.label
         noteService.addNewNote(this.state.note).then(this.setState({
             note: {
                 id: noteService.getNoteId(),
                 type: "note-todos",
                 info: {
-                    label: "",
-                    todos: [
-                        { txt: "", doneAt: null },
-                        { txt: "", doneAt: null }
-                    ]
+                    label: label,
+                    todo: ''
                 }
             }
         }))
@@ -58,8 +43,7 @@ export class TodoNoteAdd extends React.Component {
     };
 
     render() {
-        const { label } = this.state.note.info;
-        const { txt } = this.state.note.info.todos;
+        const { label,todo } = this.state.note.info;
         return (
             <div>
                 <form onSubmit={this.onSubmit} action=''>
@@ -78,12 +62,12 @@ export class TodoNoteAdd extends React.Component {
                         type='text'
                         onChange={this.handleChange}
                         id='note-todo-list-add'
-                        name='list'
-                        value={txt}
+                        name='todo'
+                        value={todo}
                         placeholder="What Todo..."
                     />
 
-                    <button className="add-btn">Add List</button>
+                    <button className="add-btn">Add Todo</button>
                 </form>
             </div>
         )

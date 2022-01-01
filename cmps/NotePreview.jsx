@@ -16,7 +16,8 @@ export class NotePreview extends React.Component {
     onChangeNoteColor = (ev) => {
         this.setState({ noteColor: ev.target.value })
         // console.log(this.state)
-        noteService.changeNoteColor(this.props.note.id, this.state.noteColor)
+        noteService.changeNoteColor(this.props.note.id, this.state.noteColor).then(this.props.loadNotes())
+        // this.props.loadNotes()
     }
 
     render() {
