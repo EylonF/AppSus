@@ -1,9 +1,9 @@
-import {noteService} from '../services/note.service.js'
+import { noteService } from '../services/note.service.js'
 
 export class TodoNoteAdd extends React.Component {
 
     state = {
-        note:    {
+        note: {
             id: noteService.getNoteId(),
             type: "note-todos",
             info: {
@@ -20,29 +20,25 @@ export class TodoNoteAdd extends React.Component {
         const target = event.target;
         const field = target.name;
         const value = target.value;
+        if (field === 'label') {
 
-        this.setState((prevState) => ({ note:{...prevState.note,info:{ ...prevState.note.info, }} ,
-        }))
+            this.setState((prevState) => ({
+                note: { ...prevState.note, info: { [field]: value } },
 
-        // if(field==='label') {
+            }));
+        } else {
+            //     this.setState((prevState) => ({
+            //         note: { ...prevState.note, info: {[field]:[0].txt:value} },
 
-        //     this.setState((prevState) => ({
-        //         note: { ...prevState.note, info: {[field]:value} },
-                
-        //     }));
-        // } else {
-        //     this.setState((prevState) => ({
-        //         note: { ...prevState.note, info: {[field]:[0].txt:value} },
-                
-        //     }));
-        // }
-        // };
+            //     }));
+            // }
+        };
     }
 
     onSubmit = (ev) => {
         ev.preventDefault();
         noteService.addNewNote(this.state.note).then(this.setState({
-            note:    {
+            note: {
                 id: noteService.getNoteId(),
                 type: "note-todos",
                 info: {

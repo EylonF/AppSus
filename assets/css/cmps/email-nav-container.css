@@ -5,12 +5,15 @@
 
 .email-nav-container .compose-btn{
     width: 90%;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     font-weight: bold;
     font-size: 1.4rem;
+    /* background-color: #fff; */
 }
 .email-nav-container .email-nav-btn{
-    width: 80%;
+    width: 60%;
     margin-bottom: 10px;
     font-size: 1.3rem;
+    /* background-color: #fff; */
+
 }

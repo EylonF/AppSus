@@ -43,10 +43,10 @@ export class ComposeEmailModal extends React.Component {
         ),
             this.toggleUserMsg()
 
-        ).catch(console.log('somthing went wrong'))
+        ).catch(console.log('somting went wrong'))
         this.props.onComposeEmail()
     }
-
+    // this.setState((prevState)=>({...prevState,emailSent: false}))
     handleChange = ({ target }) => {
         const field = target.name
         const value = target.value
