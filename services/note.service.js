@@ -114,5 +114,6 @@ function changeNoteColor(noteId, noteColor) {
         return note
     });
 	_saveNotesToStorage(notes);
-	return Promise.resolve();
+	// return Promise.resolve();
+   
 }

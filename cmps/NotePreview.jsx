@@ -1,5 +1,6 @@
 import { DynamicNote } from './Dynamic-cmps/DynamicNote.jsx'
 import { NoteActionBar } from './NoteActionBar.jsx'
+import { noteService } from '../services/note.service.js'
 // import { ColorInput } from './ColorInput.jsx'
 export class NotePreview extends React.Component {
     state = {
@@ -15,6 +16,7 @@ export class NotePreview extends React.Component {
     onChangeNoteColor = (ev) => {
         this.setState({ noteColor: ev.target.value })
         // console.log(this.state)
+        noteService.changeNoteColor(this.props.note.id, this.state.noteColor)
     }
 
     render() {
