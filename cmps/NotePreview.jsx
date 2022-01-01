@@ -7,7 +7,8 @@ export class NotePreview extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props.note)
+        // console.log('note',this.props.note.style.backgroundColor)
+        this.setState({noteColor:this.props.note.style.backgroundColor})
     }
     
 
