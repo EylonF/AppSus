@@ -1,4 +1,4 @@
-// import { NoteActionBar } from "../NoteActionBar.jsx"
+import { TodoPreview } from "../TodoPreview.jsx"
 
 export class NoteTodos extends React.Component {
 
@@ -6,21 +6,21 @@ export class NoteTodos extends React.Component {
 
     }
 
-// componentDidMount() {
-    
-// }
+    // componentDidMount() {
+
+    // }
 
 
 
     render() {
-const {note,noteColor} = this.props
-
+        const { note, noteColor } = this.props
+        const { todos } = note.info
         return (
             <article className="card-note" style={{ backgroundColor: noteColor }} >
                 <h2 contenteditable="true">{note.info.label}</h2>
-                {/* <ul>
-                    {note.info.todos.map(todo => <li contenteditable="true">{note.todo.txt}</li>)}
-                </ul> */}
+                {todos.map(todo => <TodoPreview todo={todo} />)}
+
+                
             </article>
         )
 
@@ -28,19 +28,3 @@ const {note,noteColor} = this.props
 }
 
 
-// export function NoteTodos({ note, onDeleteNote, noteColor }) {
-
-//     // const todoTxt = info.todos.map(todo => todo.txt)
-
-
-
-//     return (
-//         <article className="card-note" style={{ backgroundColor: noteColor }} >
-//             <h2 contenteditable="true">{note.info.label}</h2>
-//             <ul>
-//                 {note.info.todos.map(todo => <li contenteditable="true">{note.todo.txt}</li>)}
-//             </ul>
-//             {/* <NoteActionBar note={note} onDeleteNote={onDeleteNote}/> */}
-//         </article>
-//     )
-// }

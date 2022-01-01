@@ -38,7 +38,10 @@ const gNotes = [
         type: "note-todos",
         info: {
             label: "Get my stuff together",
-            todo: 'do todo'
+            todos: [
+                { txt: "Driving liscence", doneAt: null },
+                { txt: "Coding power", doneAt: 187111111 }
+            ]
         },
         style: {
             backgroundColor: "#BAABDA"
@@ -137,35 +140,35 @@ function _loadNotesFromStorage() {
     return storageService.loadFromStorage(STORAGE_KEY)
 }
 
-function getNoteId(){
+function getNoteId() {
     const notes = _loadNotesFromStorage()
-return `e10${notes.length+1}`
+    return `e10${notes.length + 1}`
 }
 
 
 function addNewNote(note) {
-	let notes = _loadNotesFromStorage();
-	// let newNote = _createNotes(input, type);
-	notes.unshift(note);
-	_saveNotesToStorage(notes);
-	return Promise.resolve();
+    let notes = _loadNotesFromStorage();
+    // let newNote = _createNotes(input, type);
+    notes.unshift(note);
+    _saveNotesToStorage(notes);
+    return Promise.resolve();
 }
 
 
 function deleteNote(noteId) {
-	let notes = _loadNotesFromStorage();
-	notes = notes.filter((note) => note.id !== noteId);
-	_saveNotesToStorage(notes);
-	return Promise.resolve();
+    let notes = _loadNotesFromStorage();
+    notes = notes.filter((note) => note.id !== noteId);
+    _saveNotesToStorage(notes);
+    return Promise.resolve();
 }
 
 function changeNoteColor(noteId, noteColor) {
-	let notes = _loadNotesFromStorage();
-	notes = notes.map((note)=> {
+    let notes = _loadNotesFromStorage();
+    notes = notes.map((note) => {
         if (note.id === noteId) note.style.backgroundColor = noteColor
         return note
     });
-	_saveNotesToStorage(notes);
-	return Promise.resolve();
-   
+    _saveNotesToStorage(notes);
+    return Promise.resolve();
+
 }
