@@ -5,7 +5,7 @@ export const noteService = {
     getNoteId,
     addNewNote,
     deleteNote,
-    onChangeNoteColor,
+    changeNoteColor,
 }
 
 const STORAGE_KEY = 'noteDB'
@@ -107,7 +107,12 @@ function deleteNote(noteId) {
 	return Promise.resolve();
 }
 
-function onChangeNoteColor(ev){
-    this.setState({ noteColor: ev.target.value })
-    console.log(this.state)
+function changeNoteColor(noteId, noteColor) {
+	let notes = _loadNotesFromStorage();
+	notes = notes.map((note)=> {
+        if (note.id === noteId) note.style.backgroundColor = noteColor
+        return note
+    });
+	_saveNotesToStorage(notes);
+	return Promise.resolve();
 }

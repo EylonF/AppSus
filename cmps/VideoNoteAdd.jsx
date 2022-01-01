@@ -10,6 +10,9 @@ export class VideoNoteAdd extends React.Component {
                 url: "",
                 title: "",
             },
+            style: {
+                backgroundColor: "#D77FA1"
+            },
         }
     }
 

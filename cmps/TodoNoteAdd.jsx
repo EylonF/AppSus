@@ -12,7 +12,10 @@ export class TodoNoteAdd extends React.Component {
                     { txt: "", doneAt: null },
                     { txt: "", doneAt: null }
                 ]
-            }
+            },
+            style: {
+                backgroundColor: "#BAABDA"
+            },
         },
     }
 

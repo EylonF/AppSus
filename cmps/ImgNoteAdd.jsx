@@ -11,8 +11,8 @@ export class ImgNoteAdd extends React.Component {
                 title: ""
             },
             style: {
-                backgroundColor: ""
-            }
+                backgroundColor: "#D6E5FA"
+            },
         }
     }
 

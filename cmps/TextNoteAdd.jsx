@@ -9,7 +9,10 @@ export class TextNoteAdd extends React.Component {
             isPinned: false,
             info: {
                 txt: ""
-            }
+            },
+            style: {
+                backgroundColor: "#FF4848"
+            },
         },
     }
 
