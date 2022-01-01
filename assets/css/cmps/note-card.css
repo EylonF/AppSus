@@ -34,6 +34,7 @@
 }
 
 .card-note:hover {
+    z-index: 5;
     transform: scale(1.1);
     box-shadow: 0px 0px 200px rgb(0, 0, 0);
 }
